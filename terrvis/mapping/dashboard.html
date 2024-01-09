@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
+  <link href="static/styles.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Mapping Terrorism</title>
+</head>
+<body>
+    <nav style="display: flex;justify-content: center; align-items: center;">
+      <div id="buttons-home">
+          <button  id="home" onclick="location.href='../index.html'">Home</button>
+          <button  id="info" onclick="location.href='../info.html'">Info</button>
+          <button  id="brief" onclick="location.href='../brief.html'">Brief</button>
+          <button  id="chord" onclick="location.href='../chord.html'">Chord</button>
+          <button class="selected" id="gtd">Map</button>
+          <button  id="reaction" onclick="location.href='../reaction.html'">Reaction</button>
+      </div>
+
+
+
+    </nav>
+    <section id="map-holder">
+      <div id="map"></div>
+      <div id="legend"></div>
+      <div id="map-info">
+        <h2>🔔使用指南</h2>
+        <p>
+          1. 你可以通过鼠标或者触控板进行放大缩小，当放大到一定程度之后，您可以点击对应图标查看详细事件信息.<br><br>
+          2. 我们将事件根据类型分类，并用图标表示分组。放大后，您也可也通过过滤器对您所想要查看的具体信息进行筛选查看。
+        </p>
+      </div>
+      <div id='emoji-legend' style="display: none;">
+        <p><img src="img/biological.png" alt="biological weapon icon" class="legend">Biological</p>
+        <p><img src="img/bomb.png" alt="explosive weapon icon" class="legend">Explosive</p>
+        <p><img src="img/chemical.png" alt="chemical weapon icon" class="legend">Chemical</p>
+        <p><img src="img/firearm.png" alt="firearms weapon icon" class="legend">Firearm</p>
+        <p><img src="img/incendiary.png" alt="incendiary weapon icon" class="legend">Incendiary</p>
+        <p><img src="img/melee.png" alt="melee weapon icon" class="legend">Melee</p>
+        <p><img src="img/sabotage.png" alt="sabotage equipment icon" class="legend">Sabotage</p>
+        <p><img src="img/marker.png" alt="unknown weapon icon" class="legend">Unknown</p>
+        <p><img src="img/vehicle.png" alt="vehicle icon" class="legend">Vehicle</p>
+      </div>
+      <div id='sorter' style="display: none;">
+        <h2>Filter:</h2>
+        <div id="year">
+          <p>Year:</p>
+          <select name="Years" id="years" onchange="filter()">
+            <option></option>
+            <option value="2010-2019">2010-2020</option>
+            <option value="2000-2009">2000-2009</option>
+            <option value="1990-1999">1990-1999</option>
+            <option value="1980-1989">1980-1989</option>
+            <option value="1970-1979">1970-1979</option>
+          </select>
+        </div>
+        <div id="death">
+          <p>Deaths:</p>
+          <select name="Deaths" id="deaths" onchange="filter()">
+            <option></option>
+            <option value="0-5">0-5</option>
+            <option value="6-10">6-10</option>
+            <option value="11-20">11-20</option>
+            <option value="21">21+</option>
+          </select>
+        </div>
+        <div id="injury">
+          <p>Injuries:</p>
+          <select name="Injuries" id="injuries" onchange="filter()">
+            <option></option>
+            <option value="0-5">0-5</option>
+            <option value="6-10">6-10</option>
+            <option value="11-20">11-20</option>
+            <option value="21">21+</option>
+          </select>
+        </div>
+        <div id="property-dmg">
+          <p>Property damage:</p>
+          <select name="Property-dmg" id="prop-dmg" onchange="filter()">
+            <option></option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+            <option value="-9">Unknown</option>
+          </select>
+        </div>
+      </div>
+    </section>
+  <script src="src/map1.js"></script>
+  <script src="static/index.js"></script>
+</body>
+</html>

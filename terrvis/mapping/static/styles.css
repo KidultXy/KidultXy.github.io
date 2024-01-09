@@ -1,0 +1,253 @@
+:root p {
+  margin: 0;
+}
+
+body {
+  font-family: "Work Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+.hidden {
+  display: none !important;
+}
+
+.map-hidden {
+  visibility: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color:#1d2124;
+  z-index: 10;
+}
+nav .title-wrapper {
+  padding: 1.25rem 2rem;
+}
+nav .title-wrapper .title {
+  font-weight: 500;
+  color: white;
+  font-size: 1rem;
+}
+nav #buttons-home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 1.25rem 2rem;
+  gap: 1rem;
+}
+nav #buttons-home button {
+  border: 0;
+  font-size: 1rem;
+  width: 100%;
+  cursor: pointer;
+  background-color: #1d2124;
+  color: white;
+}
+nav #buttons-home button:hover {
+  border-bottom: 0.1em solid white;
+}
+nav #buttons-home .selected {
+  border-bottom: 0.1em solid white;
+}
+
+#overview {
+  padding: 0 2rem 1.25rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media only screen and (max-width: 800px) {
+  #overview {
+    grid-template-columns: 1fr;
+  }
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+#content img {
+  margin-top: 5vh;
+  max-width: 70%;
+  min-width: 30vh;
+}
+
+#intro {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+#info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  line-height: 1.675;
+  flex-wrap: wrap;
+}
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: space-evenly;
+  flex-direction: column;
+}
+#about div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#about div div {
+  margin-left: 0.5em;
+  margin-bottom: 5vh;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#about img {
+  object-fit: cover;
+  margin-bottom: 5vh;
+  width: 10vh;
+  height: 10vh;
+  margin-right: 0.5em;
+}
+
+#map {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 93vh;
+}
+
+#sorter, #legend {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.5);
+  bottom: 30px;
+  right: 10px;
+  padding: 10px;
+  width: 20vh;
+  height: min-content;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 800px) {
+  #sorter, #legend {
+    padding: 5px;
+    font-size: 0.5rem;
+    width: 15vh;
+  }
+}
+#sorter div, #legend div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+@media only screen and (max-width: 800px) {
+  #sorter div, #legend div {
+    font-size: 0.75rem;
+  }
+}
+
+#sorter :not(h2) {
+  margin-bottom: 0.5rem;
+}
+#sorter :not(h2) select {
+  min-width: 100px;
+}
+@media only screen and (max-width: 800px) {
+  #sorter :not(h2) select {
+    min-width: 5vh;
+  }
+}
+
+#emoji-legend {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.5);
+  bottom: 30px;
+  right: 27vh;
+  padding: 10px;
+  width: 20vh;
+  height: min-content;
+  width: min-content;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 800px) {
+  #emoji-legend {
+    padding: 5px;
+    font-size: 0.75rem;
+    width: 12vh;
+    right: 10px;
+    bottom: 225px;
+  }
+}
+#emoji-legend .legend {
+  width: 25%;
+}
+
+.mapboxgl-popup-content {
+  max-width: 35vh;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+#map-info {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.5);
+  bottom: 30px;
+  left: 10px;
+  padding: 10px;
+  width: 30vh;
+  height: min-content;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 800px) {
+  #map-info {
+    padding: 5px;
+    font-size: 0.65rem;
+    width: 25vh;
+  }
+}
+
+.dot {
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  margin-right: 12px;
+}
+
+.dot-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-style: italic;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Terrorism</title>
+    <link href="./images/terrorism.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+ <!-- Vendor Director Files -->
+		<link href="assets/fonts/iconfont.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/common.css">
+    	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+.timeline {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 700px;
+  position: relative;
+}
+.timeline__content-title {
+  font-weight: normal;
+  font-size: 66px;
+  margin: -10px 0 0 0;
+  transition: 0.4s;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+}
+.timeline__content-desc {
+  margin: 0;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, .7);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: normal;
+  line-height: 25px;
+}
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  margin-left: -1px;
+  content: "";
+  background: rgba(255, 255, 255, .07);
+}
+@media only screen and (max-width: 767px) {
+  .timeline:before {
+    left: 40px;
+  }
+}
+.timeline-item {
+  padding: 40px 0;
+  opacity: 0.3;
+  filter: blur(2px);
+  transition: 0.5s;
+  box-sizing: border-box;
+  width: calc(50% - 40px);
+  display: flex;
+  position: relative;
+  transform: translateY(-80px);
+}
+.timeline-item:before {
+  content: attr(data-text);
+  letter-spacing: 3px;
+  width: 100%;
+  position: absolute;
+  color: rgba(255, 255, 255, .5);
+  font-size: 13px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  border-left: 2px solid rgba(255, 255, 255, .5);
+  top: 70%;
+  margin-top: -5px;
+  padding-left: 15px;
+  opacity: 0;
+  right: calc(-100% - 56px);
+}
+.timeline-item:nth-child(even) {
+  align-self: flex-end;
+}
+.timeline-item:nth-child(even):before {
+  right: auto;
+  text-align: right;
+  left: calc(-100% - 56px);
+  padding-left: 0;
+  border-left: none;
+  border-right: 2px solid rgba(255, 255, 255, .5);
+  padding-right: 15px;
+}
+.timeline-item--active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+.timeline-item--active:before {
+  top: 50%;
+  transition: 0.3s all 0.2s;
+  opacity: 1;
+}
+.timeline-item--active .timeline__content-title {
+  margin: -50px 0 20px 0;
+}
+@media only screen and (max-width: 767px) {
+  .timeline-item {
+    align-self: baseline !important;
+    width: 100%;
+    padding: 0 30px 150px 80px;
+  }
+  .timeline-item:before {
+    left: 10px !important;
+    padding: 0 !important;
+    top: 50px;
+    text-align: center !important;
+    width: 60px;
+    border: none !important;
+  }
+  .timeline-item:last-child {
+    padding-bottom: 40px;
+  }
+}
+.timeline__img {
+  max-width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .4);
+}
+.timeline-container {
+  width: 100%;
+  position: relative;
+  padding: 80px 0;
+  transition: 0.3s ease 0s;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.timeline-container:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+ background: rgba(0,0,0,0.6);
+  content: "";
+}
+.timeline-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+.timeline-header__title {
+  color: #fff;
+  font-size: 58px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+.timeline-header__subtitle {
+  color: rgba(255, 255, 255, .5);
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+  margin: 10px 0 0 0;
+  font-weight: normal;
+}
+.demo-footer {
+  padding: 60px 0;
+  text-align: center;
+}
+.demo-footer a {
+  color: #999;
+  display: inline-block;
+  font-family: Cardo;
+}
+
+    </style>
+</head>
+<body>
+
+
+  <div class="director" style="background: #1d2124">
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+                        <a class="nav-link active"href="index.html">
+                             <i class="iconfont icon-shouye"  style="font-size: 30px"></i>
+                        </a>
+                      </li>
+
+        <li class="nav-item">
+        <a class="nav-link active"href="info.html">
+             <i class="iconfont icon-icon-test21"  style="font-size: 30px"></i>
+        </a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link" href="./brief.html">
+             <i class="iconfont icon-icon-test15"  style="font-size: 30px"></i>
+        </a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link active" href="./chord.html">
+             <i class="iconfont icon-icon-test11"  style="font-size: 30px"></i>
+        </a>
+        </li>
+
+
+        <li class="nav-item">
+        <a class="nav-link" href="./mapping/dashboard.html">
+            <i class="iconfont icon-icon-test19 "  style="font-size: 30px"></i>
+        </a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link" href="./reaction.html">
+           <i class="iconfont icon-yonghu"  style="font-size: 30px"></i>
+        </a>
+        </li>
+    </ul>
+</div>
+     <div class="timeline-container" id="timeline-1">
+  <div class="timeline-header">
+    <h2 class="timeline-header__title">TERRORISM BEYOND THE HEADLINES</h2>
+    <h3 class="timeline-header__subtitle">Understanding the Root Causes of Terrorism</h3>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item" data-text="Start">
+      <div class="timeline__content"><img class="timeline__img" src="images/banner.jpg" />
+        <h2 class="timeline__content-title">1972</h2>
+        <p class="timeline__content-desc">实际上，人们开始大范围地意识到恐怖主义的重要性可以追溯到20世纪60年代末和70年代初。在这个时期，一些恐怖主义组织开始在世界各地活动，例如巴勒斯坦解放组织、爱尔兰共和军和日赛军等，它们的恐怖袭击引起了广泛的关注和警惕。
+最具代表性的恐怖主义事件之一是1972年的慕尼黑奥运会人质事件。当时，来自巴勒斯坦的恐怖分子组织“黑色九月”在慕尼黑奥运会上绑架了以色列运动员，并在事件中导致11名以色列运动员和教练员丧生。
+这场事件震惊了全世界，成为恐怖主义问题得到全球范围内关注的重要契机。这场事件不仅导致以色列和巴勒斯坦之间的关系更加紧张，也引起了国际社会对恐怖主义的关注和警惕，并促使各国采取更加积极的措施来打击恐怖主义。</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="A turning point">
+      <div class="timeline__content"><img class="timeline__img" src="images/banner2.jpg"/>
+        <h2 class="timeline__content-title">2001</h2>
+        <p class="timeline__content-desc">
+            然而，2001年的9/11事件改变了恐怖主义的格局。基地组织对美国本土发动的恐怖袭击，使得全球范围内的恐怖主义威胁受到了广泛关注。此后，恐怖主义的目标和动机发生了变化，不再局限于政治和宗教领域，而是包括经济、社会和文化方面的目标。例如，2004年的马德里火车爆炸案和2005年的伦敦地铁爆炸案，旨在打击西方社会的价值观和生活方式。
+此外，国际政治和经济环境的变化也导致了恐怖主义发生地区的变化。全球化和经济发展使得一些地区出现了新的社会和经济问题，例如失业、贫困和社会不平等等，这些问题为恐怖主义组织提供了新的招募和发展机会。同时，国际政治的变化，例如中东地区的战争和冲突，也为恐怖主义组织提供了更多的机会和动机。</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="What is the status quo">
+      <div class="timeline__content"><img class="timeline__img" src="images/banner3.jpg"/>
+        <h2 class="timeline__content-title">Nowadays</h2>
+        <p class="timeline__content-desc">
+            恐怖主义已经成为全球性的问题，不再局限于某个国家或地区。恐怖主义组织和个人利用全球化的便利条件，跨越国界进行恐怖袭击和恐怖活动。同时，一些恐怖主义组织也开始在不同国家之间建立联系和合作。同时恐怖主义的手段不再局限于传统的爆炸袭击，还包括人质劫持、狙击、刺杀、化学攻击、网络攻击等。这些手段更加难以预测和防范，给国际社会带来了巨大的挑战。
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="The original intention of this website">
+      <div class="timeline__content"><img class="timeline__img" src="images/banner5.jpg"/>
+        <h2 class="timeline__content-title">Analyze</h2>
+        <p class="timeline__content-desc">
+            因此，本网站以GTD提供的1970-2020年的数据集作为数据源，分析可视化恐怖主义事件的时空分布与恐怖组织的活动特征与活动细节，意在通过可视化技术和工具，让人们更加直观、全面地了解和分析恐怖主义的相关数据和情况，从而帮助制定更加有效的打击恐怖主义的策略和措施。
+        </p>
+      </div>
+    </div>
+<!--    <div class="timeline-item" data-text="EDA">-->
+<!--      <div class="timeline__content"><img class="timeline__img" src="images/banner4.jpg"/>-->
+<!--        <h2 class="timeline__content-title">1915</h2>-->
+<!--        <p class="timeline__content-desc">In 1915, when Dardanelles campaign was launched, Colonel Mustafa Kemal became anational hero by winning successive victories and finally repelling the invaders.</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="timeline-item" data-text="EDA">-->
+<!--      <div class="timeline__content"><img class="timeline__img" src="images/banner4.jpg"/>-->
+<!--        <h2 class="timeline__content-title">1916</h2>-->
+<!--        <p class="timeline__content-desc">Promotedto general in 1916, at age 35, he liberated two major provinces in eastern Turkey thatyear. In the next two years, he served as commander of several Ottoman armies inPalestine, Aleppo, and elsewhere, achieving another major victory by stopping the enemyadvance at Aleppo.</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="timeline-item" data-text="EDA">-->
+<!--      <div class="timeline__content"><img class="timeline__img" src="images/banner5.jpg"/>-->
+<!--        <h2 class="timeline__content-title">1919</h2>-->
+<!--        <p class="timeline__content-desc">On May 19, 1919, Mustafa Kemal Pasha landed in the Black Sea port of Samsun to startthe War of Independence. In defiance of the Sultan's government, he rallied a liberationarmy in Anatolia and convened the Congress of Erzurum and Sivas which established thebasis for the new national effort under his leadership.</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="timeline-item" data-text="EDA">-->
+<!--      <div class="timeline__content"><img class="timeline__img" src="images/banner6.jpg"/>-->
+<!--        <h2 class="timeline__content-title">1920</h2>-->
+<!--        <p class="timeline__content-desc">-->
+<!--          On April 23, 1920, the GrandNational Assembly was inaugurated. Mustafa Kemal Pasha was elected to its Presidency.-->
+<!--          Fighting on many fronts, he led his forces to victory against rebels and invadingarmies. Following the Turkish triumph at the two major battles at Inonu in Western Turkey,the Grand National Assembly conferred on Mustafa Kemal Pasha the title ofCommander-in-Chief with the rank of Marshal.-->
+<!--        </p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="timeline-item" data-text="EDA">-->
+<!--      <div class="timeline__content"><img class="timeline__img" src="images/viz/suicide_attacks.png"/>-->
+<!--        <h2 class="timeline__content-title">1922</h2>-->
+<!--        <p class="timeline__content-desc">At the end of August 1922, the Turkish armieswon their ultimate victory. Within a few weeks, the Turkish mainland was completelyliberated, the armistice signed, and the rule of the Ottoman dynasty abolished</p>-->
+<!--      </div>-->
+<!--    </div>-->
+
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+ <script>
+
+    (function($) {
+  $.fn.timeline = function() {
+    var selectors = {
+      id: $(this),
+      item: $(this).find(".timeline-item"),
+      activeClass: "timeline-item--active",
+      img: ".timeline__img"
+    };
+    selectors.item.eq(0).addClass(selectors.activeClass);
+    selectors.id.css(
+      "background-image",
+      "url(" +
+        selectors.item
+          .first()
+          .find(selectors.img)
+          .attr("src") +
+        ")"
+    );
+    var itemLength = selectors.item.length;
+    $(window).scroll(function() {
+      var max, min;
+      var pos = $(this).scrollTop();
+      selectors.item.each(function(i) {
+        min = $(this).offset().top;
+        max = $(this).height() + $(this).offset().top;
+        var that = $(this);
+        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+          selectors.item.removeClass(selectors.activeClass);
+          selectors.id.css(
+            "background-image",
+            "url(" +
+              selectors.item
+                .last()
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+          );
+          selectors.item.last().addClass(selectors.activeClass);
+        } else if (pos <= max - 40 && pos >= min) {
+          selectors.id.css(
+            "background-image",
+            "url(" +
+              $(this)
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+          );
+          selectors.item.removeClass(selectors.activeClass);
+          $(this).addClass(selectors.activeClass);
+        }
+      });
+    });
+  };
+})(jQuery);
+
+$("#timeline-1").timeline();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+    <title>Terrorism</title>
+    <head>
+        <meta charset="utf-8"><link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/series-label.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <!-- Vendor Director Files -->
+		<link href="./assets/fonts/iconfont.css" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/common.css">
+    	<link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Vendor Chart Files -->
+        <link rel="stylesheet" href="./assets/css/detail.css">
+
+
+        <!-- Vendor Timeline Files -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"></script>
+<!--        <link rel="stylesheet" type="text/css" href="assets/css/timeline.css">-->
+
+    </head>
+<!--    <body style="background-image: linear-gradient(to right bottom, #0f0101, #261314, #3e1e1f, #57292a, #723536, #854646, #995857, #ad6a69, #bd8584, #cba1a0, #d9bcbc, #e6d9d9);">-->
+    <body>
+      <div class="director" style="background: #1d2124">
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+                        <a class="nav-link active"href="index.html">
+                             <i class="iconfont icon-shouye"  style="font-size: 30px"></i>
+                        </a>
+                      </li>
+
+        <li class="nav-item">
+        <a class="nav-link active"href="info.html">
+             <i class="iconfont icon-icon-test21"  style="font-size: 30px"></i>
+        </a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link" href="./brief.html">
+             <i class="iconfont icon-icon-test15"  style="font-size: 30px"></i>
+        </a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link active" href="./chord.html">
+             <i class="iconfont icon-icon-test11"  style="font-size: 30px"></i>
+        </a>
+        </li>
+
+
+        <li class="nav-item">
+        <a class="nav-link" href="./mapping/dashboard.html">
+            <i class="iconfont icon-icon-test19 "  style="font-size: 30px"></i>
+        </a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link" href="./reaction.html">
+           <i class="iconfont icon-yonghu"  style="font-size: 30px"></i>
+        </a>
+        </li>
+    </ul>
+</div>
+
+        <div class="id1">
+
+        <div class="shell" style="float: left">
+            <a href="./iraq.html" class="box"><i class="iconfont  icon-icon-test16" style="font-size: 40px;color: white"></i><span>Country</span></a>
+            <a onclick="attack_area()" class="box"><i class="iconfont  icon-icon-test11" style="font-size: 40px;color: white"></i><span>Area</span></a>
+            <a onclick="attack_line()" class="box"><i class="iconfont  icon-icon-test12" style="font-size: 40px;color: white"></i><span>Line</span></a>
+            <a href="iraq.html" class="box"><i class="iconfont  icon-icon-test10" style="font-size: 40px;color: white"></i><span>Attack type</span></a>
+            <a href="iraq.html" class="box"><i class="iconfont  icon-icon-test1" style="font-size: 40px;color: white"></i><span>Attack region</span></a>
+        </div>
+
+        <div id="container" class="shadow" style="min-width:1500px;height:400px;float:left;margin-left: 140px;margin-bottom: 50px"></div>
+
+        <figure class="highcharts-figure" >
+          <div id="parent-container">
+            <div id="play-controls">
+              <button id="play-pause-button" class="fa fa-play" title="play"></button>
+              <input id="play-range" type="range" value="1970" min="1970" max="2020"/>
+            </div>
+            <div id="timeline-container" class="shadow" ></div>
+          </div>
+        </figure>
+
+        </div>
+
+    </body>
+    <script type="text/javascript" src='./assets/js/brief.js'></script>
+</html>

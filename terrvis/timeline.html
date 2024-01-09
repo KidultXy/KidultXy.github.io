@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>Terrorism</title>
+    <link href="./images/terrorism.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+ <!-- Vendor Director Files -->
+		<link href="assets/fonts/iconfont.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/common.css">
+    	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+.timeline {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 700px;
+  position: relative;
+}
+.timeline__content-title {
+  font-weight: normal;
+  font-size: 66px;
+  margin: -10px 0 0 0;
+  transition: 0.4s;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+}
+.timeline__content-desc {
+  margin: 0;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, .7);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: normal;
+  line-height: 25px;
+}
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  margin-left: -1px;
+  content: "";
+  background: rgba(255, 255, 255, .07);
+}
+@media only screen and (max-width: 767px) {
+  .timeline:before {
+    left: 40px;
+  }
+}
+.timeline-item {
+  padding: 40px 0;
+  opacity: 0.3;
+  filter: blur(2px);
+  transition: 0.5s;
+  box-sizing: border-box;
+  width: calc(50% - 40px);
+  display: flex;
+  position: relative;
+  transform: translateY(-80px);
+}
+.timeline-item:before {
+  content: attr(data-text);
+  letter-spacing: 3px;
+  width: 100%;
+  position: absolute;
+  color: rgba(255, 255, 255, .5);
+  font-size: 13px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  border-left: 2px solid rgba(255, 255, 255, .5);
+  top: 70%;
+  margin-top: -5px;
+  padding-left: 15px;
+  opacity: 0;
+  right: calc(-100% - 56px);
+}
+.timeline-item:nth-child(even) {
+  align-self: flex-end;
+}
+.timeline-item:nth-child(even):before {
+  right: auto;
+  text-align: right;
+  left: calc(-100% - 56px);
+  padding-left: 0;
+  border-left: none;
+  border-right: 2px solid rgba(255, 255, 255, .5);
+  padding-right: 15px;
+}
+.timeline-item--active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+.timeline-item--active:before {
+  top: 50%;
+  transition: 0.3s all 0.2s;
+  opacity: 1;
+}
+.timeline-item--active .timeline__content-title {
+  margin: -50px 0 20px 0;
+}
+@media only screen and (max-width: 767px) {
+  .timeline-item {
+    align-self: baseline !important;
+    width: 100%;
+    padding: 0 30px 150px 80px;
+  }
+  .timeline-item:before {
+    left: 10px !important;
+    padding: 0 !important;
+    top: 50px;
+    text-align: center !important;
+    width: 60px;
+    border: none !important;
+  }
+  .timeline-item:last-child {
+    padding-bottom: 40px;
+  }
+}
+.timeline__img {
+  max-width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .4);
+}
+.timeline-container {
+  width: 100%;
+  position: relative;
+  padding: 80px 0;
+  transition: 0.3s ease 0s;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.timeline-container:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+ background: rgba(0,0,0,0.6);
+  content: "";
+}
+.timeline-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+.timeline-header__title {
+  color: #fff;
+  font-size: 58px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+.timeline-header__subtitle {
+  color: rgba(255, 255, 255, .5);
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+  margin: 10px 0 0 0;
+  font-weight: normal;
+}
+.demo-footer {
+  padding: 60px 0;
+  text-align: center;
+}
+.demo-footer a {
+  color: #999;
+  display: inline-block;
+  font-family: Cardo;
+}
+
+    </style>
+</head>
+<body>
+
+
+    <div class="director" style="background: #1d2124">
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+                        <a class="nav-link active"href="index.html">
+                             <i class="iconfont icon-shouye"  style="font-size: 30px"></i>
+                        </a>
+                      </li>
+
+        <li class="nav-item">
+        <a class="nav-link active"href="info.html">
+             <i class="iconfont icon-icon-test21"  style="font-size: 30px"></i>
+        </a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link" href="./brief.html">
+             <i class="iconfont icon-icon-test15"  style="font-size: 30px"></i>
+        </a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link active" href="./chord.html">
+             <i class="iconfont icon-icon-test11"  style="font-size: 30px"></i>
+        </a>
+        </li>
+
+
+        <li class="nav-item">
+        <a class="nav-link" href="./mapping/dashboard.html">
+            <i class="iconfont icon-icon-test19 "  style="font-size: 30px"></i>
+        </a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link" href="./reaction.html">
+           <i class="iconfont icon-yonghu"  style="font-size: 30px"></i>
+        </a>
+        </li>
+    </ul>
+</div>
+     <div class="timeline-container" id="timeline-1">
+  <div class="timeline-header">
+    <h2 class="timeline-header__title">TERRORISM In Iraq</h2>
+    <h3 class="timeline-header__subtitle">Understanding the Root Causes of Terrorism</h3>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item" data-text="EDA">
+      <div class="timeline__content"><img class="timeline__img" src="images/iraq/iraq_war.jpg" />
+        <h2 class="timeline__content-title">2003</h2>
+        <p class="timeline__content-desc">
+            2003年3月，美国等西方国家对伊拉克发动了战争，推翻了萨达姆·侯赛因政权。这场战争导致伊拉克政局混乱，社会治安恶化，成为了恐怖分子活动的温床。战后，美国等国家在伊拉克设立了临时政府，试图在政治和经济方面重建伊拉克。
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="EDA">
+      <div class="timeline__content"><img class="timeline__img" src="images/iraq/vote.jpg"/>
+        <h2 class="timeline__content-title">2005</h2>
+        <p class="timeline__content-desc">
+            2005年伊拉克进行了首次全国多党制选举，结束了萨达姆·侯赛因独裁时期的单一党制。这次选举为伊拉克政治进程注入了新的动力，但也加剧了什叶派和逊尼派之间的紧张关系。
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="EDA">
+      <div class="timeline__content"><img class="timeline__img" src="images/iraq/back.jpeg"/>
+        <h2 class="timeline__content-title">2011</h2>
+        <p class="timeline__content-desc">
+            美军正式从伊拉克撤军，结束了长达八年的驻军。然而，美军撤离后，伊拉克政局仍然不稳定，恐怖分子仍然在该国活动，导致恐怖袭击事件频繁发生。
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="EDA">
+      <div class="timeline__content"><img class="timeline__img" src="images/iraq/isis.jpg"/>
+        <h2 class="timeline__content-title">2014</h2>
+        <p class="timeline__content-desc">
+            2014年，伊斯兰国（ISIS）在伊拉克北部崛起，控制了大片领土，威胁到了伊拉克的安全和稳定。伊拉克政府和国际社会采取了一系列措施，包括武装干涉和组建联合国执法部队等，才最终打败了ISIS。
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+ <script>
+
+    (function($) {
+  $.fn.timeline = function() {
+    var selectors = {
+      id: $(this),
+      item: $(this).find(".timeline-item"),
+      activeClass: "timeline-item--active",
+      img: ".timeline__img"
+    };
+    selectors.item.eq(0).addClass(selectors.activeClass);
+    selectors.id.css(
+      "background-image",
+      "url(" +
+        selectors.item
+          .first()
+          .find(selectors.img)
+          .attr("src") +
+        ")"
+    );
+    var itemLength = selectors.item.length;
+    $(window).scroll(function() {
+      var max, min;
+      var pos = $(this).scrollTop();
+      selectors.item.each(function(i) {
+        min = $(this).offset().top;
+        max = $(this).height() + $(this).offset().top;
+        var that = $(this);
+        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+          selectors.item.removeClass(selectors.activeClass);
+          selectors.id.css(
+            "background-image",
+            "url(" +
+              selectors.item
+                .last()
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+          );
+          selectors.item.last().addClass(selectors.activeClass);
+        } else if (pos <= max - 40 && pos >= min) {
+          selectors.id.css(
+            "background-image",
+            "url(" +
+              $(this)
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+          );
+          selectors.item.removeClass(selectors.activeClass);
+          $(this).addClass(selectors.activeClass);
+        }
+      });
+    });
+  };
+})(jQuery);
+
+$("#timeline-1").timeline();
+
+    </script>
+</body>
+</html>

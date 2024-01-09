@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"><link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /* css 代码  */
+        </style>
+        <script src="https://code.hcharts.cn/highcharts/highcharts.js"></script>
+        <script src="https://code.hcharts.cn/highcharts/highcharts-more.js"></script>
+        <script src="https://code.hcharts.cn/highcharts/modules/exporting.js"></script>
+        <script src="https://code.hcharts.cn/plugins/zh_cn.js"></script>
+    </head>
+    <body>
+        <div id="container" style="min-width:400px;height:400px"></div>
+        <script>
+            var chart = Highcharts.chart('container', {
+            chart: {
+                type: 'bubble',
+                zoomType: 'xy'
+            },
+            title: {
+                text: 'Highcharts 气泡图'
+            },
+            series: [{name: 'Abortion Related', data: [[0.11764705882352941, 0.21568627450980393, 51.0]]}, {name: 'Airports & Aircraft', data: [[3.542372881355932, 3.1333333333333333, 344.0]]}, {name: 'Business', data: [[1.7667586968525677, 4.262354404613819, 8837.0]]}, {name: 'Educational Institution', data: [[0.9982882574460801, 2.8833333333333333, 2877.0]]}, {name: 'Food or Water Supply', data: [[1.0324675324675325, 1.1324503311258278, 151.0]]}, {name: 'Government (Diplomatic)', data: [[1.7147147147147148, 6.675696594427245, 1288.0]]}, {name: 'Government (General)', data: [[1.5445951500205508, 2.566094600251151, 11920.0]]}, {name: 'Journalists & Media', data: [[0.6441176470588236, 0.8576779026217228, 1333.0]]}, {name: 'Maritime', data: [[3.4285714285714284, 3.136, 124.0]]}, {name: 'Military', data: [[3.7344677935130197, 3.3426060606060606, 16411.0]]}, {name: 'NGO', data: [[1.2088607594936709, 0.9512195121951219, 613.0]]}, {name: 'Other', data: [[2.1415929203539825, 3.850467289719626, 107.0]]}, {name: 'Police', data: [[2.418877273551272, 3.240516595957075, 15989.0]]}, {name: 'Private Citizens & Property', data: [[3.332056322882011, 5.346389272193327, 28156.0]]}, {name: 'Religious Figures/Institutions', data: [[3.584219001610306, 6.774834437086093, 3016.0]]}, {name: 'Telecommunication', data: [[0.11703958691910499, 0.5034602076124568, 578.0]]}, {name: 'Terrorists/Non-State Militia', data: [[3.312866817155756, 3.4, 2100.0]]}, {name: 'Tourists', data: [[2.553763440860215, 5.440677966101695, 177.0]]}, {name: 'Transportation', data: [[2.202410383189122, 6.548834278512918, 3171.0]]}, {name: 'Unknown', data: [[0.48808104886769965, 0.29635530770762797, 5013.0]]}, {name: 'Utilities', data: [[0.48915355168013613, 0.34587116299178555, 2313.0]]}, {name: 'Violent Political Party', data: [[1.3333333333333333, 2.1679035250463823, 1075.0]]}]
+ });
+        </script>
+    </body>
+</html>

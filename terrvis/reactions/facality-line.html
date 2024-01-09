@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /* css 代码  */
+        </style>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    </head>
+    <body>
+        <div id="fatality_container" style="max-width:800px;height:400px"></div>
+        <script>
+                var chart = Highcharts.chart('fatality_container', {
+            title: {
+                    text: '1970-2020 terrorism_fatalities  terrorist_incidents  terrorism_injuries'
+            },
+            subtitle: {
+                    text: '数据来源：thesolarfoundation.com'
+            },
+            yAxis: {
+                    title: {
+                            text: '就业人数'
+                    }
+            },
+            legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle'
+            },
+            plotOptions: {
+                    series: {
+                            label: {
+                                    connectorAllowed: false
+                            },
+                            pointStart: 1970,
+                    }
+            },
+            series: [{
+                    name: 'terrorism_fatalities',
+                    data: [522, 519, 1455, 1110, 1617, 1851, 2022, 1371, 4377, 6300, 13173, 14553, 15405, 28332, 31350, 21282, 14928, 19446, 21618, 24456, 21108, 25362, 29235, 23070, 18309, 20898, 32718, 14064, 10182, 13182, 23187, 14391, 9951, 17148, 19029, 27948, 38475, 27732, 27831, 23487, 24738, 46494, 66837, 133944, 116979, 105717, 80691, 69873, 61236, 68541]
+            }, {
+                    name: 'terrorist_incidents',
+                    data:[1953, 1413, 1701, 1419, 1743, 2220, 2769, 3957, 4578, 7986, 7983, 7758, 7629, 8610, 10485, 8742, 8580, 9549, 11160, 12972, 11658, 14055, 15213, 10368, 9243, 9174, 9594, 2802, 4188, 5469, 5736, 3990, 3840, 3492, 6051, 8271, 9750, 14403, 14169, 14481, 15225, 25575, 36141, 50880, 45414, 42153, 34092, 29559, 25611, 25314]
+            }, {
+                    name: 'terrorism_injuries',
+                    data: [636, 246, 1227, 1485, 2595, 1851, 2268, 1563, 4800, 7518, 10911, 10011, 10026, 12141, 15873, 15336, 17442, 17325, 20880, 16617, 18159, 22860, 30018, 22707, 42885, 32280, 26904, 24549, 16215, 17391, 84561, 21243, 22152, 35928, 38883, 46410, 67593, 57504, 57441, 47859, 43986, 76353, 113082, 123429, 132612, 121728, 76782, 61827, 56328, 46398]
+            }],
+            responsive: {
+                    rules: [{
+                            condition: {
+                                    maxWidth: 500
+                            },
+                            chartOptions: {
+                                    legend: {
+                                            layout: 'horizontal',
+                                            align: 'center',
+                                            verticalAlign: 'bottom'
+                                    }
+                            }
+                    }]
+            },
+                    rangeSelector: {
+			selected: 1
+		},
+            scrollbar: {
+						barBackgroundColor: 'gray',
+						barBorderRadius: 7,
+						barBorderWidth: 0,
+						buttonBackgroundColor: 'gray',
+						buttonBorderWidth: 0,
+						buttonBorderRadius: 7,
+						trackBackgroundColor: 'none',
+						trackBorderWidth: 1,
+						trackBorderRadius: 8,
+						trackBorderColor: '#CCC'
+				},
+    });
+        </script>
+    </body>
+</html>
